@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information for mosque administrators and takmir",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth user ID" },
+        "email": { "type": "string", "format": "email", "description": "Email address" },
+        "displayName": { "type": "string", "description": "Full name or Takmir title" },
+        "role": { "type": "string", "enum": ["Ketua DKM", "Sekretaris", "Bendahara", "Takmir", "Khatib / Da'i", "Admin"], "description": "Role in mosque administration" },
+        "mosqueName": { "type": "string", "description": "Associated mosque name" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profile document owned by the authenticated user"
+    }
+  }
+}

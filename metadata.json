@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Informasi & Dakwah Masjid Digital",
+  "description": "Aplikasi lengkap manajemen dan dakwah masjid: generator khutbah & kajian AI dengan verifikasi dalil, administrasi surat & proposal, jadwal sholat & TV display, kas keuangan, dan media sosial dakwah.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
